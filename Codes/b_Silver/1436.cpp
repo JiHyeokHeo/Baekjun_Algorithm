@@ -14,7 +14,7 @@ int main()
 		int comp = num;
 		while (comp >= 666)
 		{
-			if (comp % 1000 == 666)		
+			if (comp % 1000 == 666)		 
 			{
 				cnt++;
 				break;
