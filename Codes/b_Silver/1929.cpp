@@ -4,38 +4,28 @@ using namespace std;
 
 bool arr[1000001];
 
-bool Find(int n)
-{
-    for(int i = 2; i <= n; i++)
-    {
-        if(arr[i] == false)
-            continue;
-
-        if(arr[i])
-        {
-            for(int j = i * i; j <= n; j += i)
-                arr[j] = false;
-        }
-    }
-}
-
 int main()
 {
+    arr[1] = true;
+    
     int M;
     int N;
 
-    cin>> M;
-    cin>> N;
+    cin >> M;
+    cin >> N;
 
-    for(int i = 2; i < 1000000; i++)
+    for (int i = 2; i <= N; i++)
     {
-        arr[i] = true;
-    }    
+        for (int j = 2; i * j <= N; j++)
+        {
+            arr[i * j] = true;
+        }
+    }
 
-    for(int i = 2; i <= 1000000; i++)
+    for (int i = M; i <= N; i++)
     {
-        if(Find(i))
-            cout<< i << '\n';
+        if (arr[i] == false)
+            cout << i << '\n';
     }
 
     return 0;
