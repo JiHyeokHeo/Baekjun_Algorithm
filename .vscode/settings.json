@@ -13,7 +13,8 @@
         "unordered_map": "cpp",
         "vector": "cpp",
         "initializer_list": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "functional": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
